@@ -1,0 +1,48 @@
+.logform-section{
+padding-top: 80px;
+}
+
+/* src/pages/LoginPage.css */
+  
+  
+
+  .login-form-section {
+  flex-direction: column;
+  margin: auto;
+
+  width: 40%;
+  background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    
+
+
+  }
+
+  .form {
+    margin-bottom: 20px!important;
+}
+
+.formtext{
+    margin-top: 20px;
+}
+
+
+  
+  /* Add responsive styles */
+  @media (max-width: 600px) {
+    .login-form-section {
+        margin-left: 20px!important;
+        margin-right: 20px!important;
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+      width: 90%;
+    }
+  }
+  

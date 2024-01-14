@@ -1,0 +1,115 @@
+/* src/pages/ChooseYourTemplates.css */
+
+.choose-templates-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.image-section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.template-image {
+  position: relative;
+  overflow: hidden;
+  width: 30%; /* Adjust the width based on the number of columns you want */
+  margin-bottom: 40px; /* Add some space between images */
+}
+
+.template-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.template-image:hover .overlay {
+  opacity: 1;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #282b8f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.template-image:hover button {
+  transform: scale(1); /* Scale up on hover */
+}
+
+button:hover {
+  background-color: #282b8f;
+}
+
+.introduction {
+  background-color: #fff;
+  padding: 60px 20px; /* Adjust padding for smaller screens */
+}
+
+.introduction h2 {
+  text-align: center;
+  font-size: 32px; /* Adjust font size for smaller screens */
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #282b8f;
+}
+
+.introduction h3 {
+  text-align: center;
+}
+
+.introduction-create-cv-btn {
+  margin-top: 40px;
+  text-align: center;
+  align-items: center;
+  background-color: #282b8f;
+  color: #fff;
+  padding: 15px 20px; /* Adjust padding for smaller screens */
+  font-size: 18px; /* Adjust font size for smaller screens */
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn {
+  margin: auto;
+  width: 100%;
+}
+
+/* Additional Media Queries for Smaller Screens */
+@media only screen and (max-width: 1200px) {
+  .template-image {
+    width: 48%; /* Two columns for screens between 768px and 1200px */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .template-image {
+    width: 100%; /* Full width for one column on smaller screens */
+  }
+}
