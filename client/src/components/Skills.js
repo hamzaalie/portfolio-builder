@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./StickyNavbar";
 import "../App.css";
 
 
 const Skills = () =>{
+  const [skills, setSkills] = useState({
+
+  });
+
+  const Handleskills = (e) => {
+    e.ristrict();
+    setSkills({...skills, [e.target.name] : e.target.value});
+  }
     return(
       <div className="forms">
         <Navbar />
@@ -20,11 +28,11 @@ const Skills = () =>{
     <div className="inputboxes">      
     <div className="left-skil">      
     <label for="skill1">Skill</label>
-    <input type="text" id="skill1" name="skill1" placeholder="e.g., Project Management" required></input>
+    <input type="text" id="skill1" name="skill1" placeholder="e.g., Project Management" value={skills.name} required onChange={Handleskills}></input>
       </div>
       <div>
     <label for="level1">Level</label>
-    <select id="level1" name="level1" required>
+    <select id="level1" name="level1" required value={skills.name} onChange={Handleskills}>
       <option value="beginner">Beginner</option>
       <option value="intermediate">Intermediate</option>
       <option value="advanced">Advanced</option>
@@ -36,11 +44,11 @@ const Skills = () =>{
    <div className="left-skil">
 
     <label for="skill2">Skill</label>
-    <input type="text" id="skill2" name="skill2" placeholder="e.g., Online Marketing" ></input>
+    <input type="text" id="skill2" name="skill2" placeholder="e.g., Online Marketing"  value={skills.name} onChange={Handleskills}></input>
     </div>
     <div>
     <label for="level2">Level</label>
-    <select id="level2" name="level2" required>
+    <select id="level2" name="level2" required  value={skills.name} onChange={Handleskills}>
       <option value="beginner">Beginner</option>
       <option value="intermediate">Intermediate</option>
       <option value="advanced">Advanced</option>
@@ -51,11 +59,11 @@ const Skills = () =>{
     <div className="inputboxes">
     <div className="left-skil">
     <label for="skill3">Skill</label>
-    <input type="text" id="skill3" name="skill3" placeholder="e.g., HTML" ></input>
+    <input type="text" id="skill3" name="skill3" placeholder="e.g., HTML"  value={skills.name} onChange={Handleskills}></input>
     </div>
     <div>
     <label for="level3">Level</label>
-    <select id="level3" name="level3" required>
+    <select id="level3" name="level3" required  value={skills.name} onChange={Handleskills}>
     <option value="beginner">Beginner</option>
     <option value="intermediate">Intermediate</option>
     <option value="advanced">Advanced</option>

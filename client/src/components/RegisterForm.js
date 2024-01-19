@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const RegisterForm = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [registrationMessage, setRegistrationMessage] = useState('');
-  const [errors, setErrors] = useState({});
+  const [username, setUsername] = useState({
+  email: '',
+  password : '',
+  registrationMessage : '',
+  errors : ''
+});
 
   const validateForm = () => {
     let newErrors = {};
